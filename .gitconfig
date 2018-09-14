@@ -1,9 +1,10 @@
 [user]
 	name = ArmCM
 	email = ackurtcobain15@gmail.com
-
 [github]
 	user = ArmCM
-
 [color]
 	branch = auto
+[alias]
+    append = commit --amend --no-edit
+    filelog = log --graph --decorate --stat --pretty=short --abbrev-commit
