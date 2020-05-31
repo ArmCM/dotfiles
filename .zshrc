@@ -72,21 +72,6 @@ POWERLEVEL9K_CUSTOM_QBIT_BACKGROUND="cyan"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 
-# js prompt WIP - how to change automatically?
-POWERLEVEL9K_CUSTOM_JAVASCRIPT="echo -n '\ue781' JavaScript"
-POWERLEVEL9K_CUSTOM_JAVASCRIPT_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_JAVASCRIPT_BACKGROUND="yellow"
-
-#python prompt WIP - how to change automatically?
-POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
-POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
-
-#ruby prompt WIP - how to change automatically?
-POWERLEVEL9K_CUSTOM_RUBY="echo -n '\ue21e' Ruby"
-POWERLEVEL9K_CUSTOM_RUBY_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_RUBY_BACKGROUND="red"
-
 source  ~/powerlevel9k/powerlevel9k.zsh-theme
 
 source ~/.local/share/fonts/*.sh

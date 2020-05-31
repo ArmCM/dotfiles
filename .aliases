@@ -32,3 +32,7 @@ alias fuck="sudo $(fc -ln -1)"
 #               0.1 mm
 alias weather="curl -4 http://wttr.in/Mexico_City"
 
+
+# disk space
+alias space="df -h /dev/sda8 --output=source,fstype,size,used,avail,pcent"
+
