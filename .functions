@@ -1,0 +1,25 @@
+funciton switchphp () {
+
+    echo "indica la verisón de php"
+
+    read version
+
+    if [ $version -eq 74 ]; 
+    then
+        sudo update-alternatives --set php /usr/bin/php7.4
+        valet stop
+    	sudo systemctl stop php7.2-fpm.service
+    	sudo systemctl start php7.4-fpm.service
+        valet start
+    elif [ $version -eq 72 ];
+    then
+        sudo update-alternatives --set php /usr/bin/php7.2
+        valet stop
+    	sudo systemctl stop php7.4-fpm.service
+    	sudo systemctl start php7.2-fpm.service
+        valet start
+    else
+    	echo "versión incorrecta."
+    fi
+}
+
