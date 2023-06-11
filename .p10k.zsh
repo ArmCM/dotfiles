@@ -32,7 +32,7 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     #custom_ubuntu
-    context                 # user@hostname
+    #context                 # user@hostname
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
@@ -61,6 +61,8 @@
     # disk_usage            # disk usage
     # ram                   # free RAM
     # swap                  # used swap
+    nvm             # node.js version from nvm (https://github.com/nvm-sh/nvm)
+    nodeenv         # node.js environment (https://github.com/ekalinin/nodeenv)
     # =========================[ Line #2 ]=========================
     newline
     # ip                    # ip address and bandwidth usage for a specified network interface
@@ -781,7 +783,7 @@ POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
   ##############[ taskwarrior: taskwarrior task count (https://taskwarrior.org/) ]##############
   # Taskwarrior color.
   typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND=74
-  
+
   # Taskwarrior segment format. The following parameters are available within the expansion.
   #
   # - P9K_TASKWARRIOR_PENDING_COUNT   The number of pending tasks: `task +PENDING count`.
@@ -1505,7 +1507,7 @@ POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
   #   - always:   Trim down prompt when accepting a command line.
   #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
   #               typed after changing current working directory.
-  typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=off
+  typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=always
 
   # Instant prompt mode.
   #
@@ -1537,19 +1539,12 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 'builtin' 'unset' 'p10k_config_opts'
 
 
-
-# nickname
-#clear
-#figlet -f slant "ArmCM"
-
-
-
-# load ~/.aliases
+# load ~/.aliases and functions
+#for file in ~/.aliases; do
+#    [ -r "$file" ] && source "$file"
+#done
+#unset file
 for file in ~/.{aliases,functions}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
-
-# alias phpunit
-alias phpunit='vendor/bin/phpunit'
-alias phpf='vendor/bin/phpunit --filter'
