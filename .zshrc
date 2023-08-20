@@ -122,5 +122,4 @@ source /Users/kei/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
-#export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"

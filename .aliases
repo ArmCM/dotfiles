@@ -7,12 +7,21 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+# List files pretty format and colors
+alias ls='ls -FGH'
+alias la='ls -AG'
+alias ll='ls -AlGh'
+alias history='fc -l 1'
+
 # Shortcuts
 alias sites="cd ~/Sites"
 
 # ------------------------------------------------------------------------------
 #  Miscellaneous
 # ------------------------------------------------------------------------------
+
+# Preview Files
+alias cat='bat'
 
 # Make aliases sudo-able
 alias sudo="sudo "
