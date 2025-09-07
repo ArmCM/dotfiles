@@ -14,7 +14,8 @@ alias ll='ls -AlGh'
 alias history='fc -l 1'
 
 # Shortcuts
-alias sites="cd ~/Sites"
+alias sites="cd ~/sites"
+alias dk="cd ~/Desktop"
 
 # ------------------------------------------------------------------------------
 #  Miscellaneous
@@ -32,6 +33,10 @@ alias please="sudo"
 alias fucking="sudo"
 alias fuck="sudo $(fc -ln -1)"
 
+# Refresh dotfiles for the current shell
+alias refresh="source ~/.zshrc"
+alias reload="source ~/.zshrc"
+
 
 # https://github.com/chubin/wttr.in
 #               Overcast
@@ -41,7 +46,44 @@ alias fuck="sudo $(fc -ln -1)"
 #               0.1 mm
 alias weather="curl -4 http://wttr.in/Mexico_City"
 
+# https://github.com/busyloop/lolcat
+# A journey of a thousand miles must begin with a single step.
+# -- Lao Tsu
+#  ^__^
+#  (oo)\_______
+#  (__)\
+#
+alias lolcow="fortune | cowsay | lolcat"
+
+
+# ------------------------------------------------------------------------------
+#  PHP Specific
+# ------------------------------------------------------------------------------
+
+alias cda="composer dump-autoload"
+
+# Laravel artisan shortcuts
+alias artisan="php artisan"
+alias tinker="php artisan tinker"
+alias migrate="php artisan migrate"
+alias seed="php artisan db:seed"
+
+# Run phpunit test suite
+alias t="clear! && ./vendor/bin/phpunit --order-by=defects --stop-on-failure --stop-on-error"
+alias tp="clear! && php artisan test --parallel"
+alias tpr="clear! && php artisan test --parallel --recreate-databases"
+alias phpunit="./vendor/bin/phpunit"
+alias pf="./vendor/bin/phpunit --filter"
+alias testcov="php artisan test --coverage"
+alias pest="./vendor/bin/pest"
 
 # disk space
 alias space="df -h /dev/sda8 --output=source,fstype,size,used,avail,pcent"
 
+
+# Delete all .DS_Store files recursively
+alias deleteDS="find . -name '*.DS_Store' -type f -ls -delete"
+alias removeDS="find . -name '*.DS_Store' -type f -ls -delete"
+
+# Flush DNS cache
+alias flushdns="sudo killall -HUP mDNSResponder"
